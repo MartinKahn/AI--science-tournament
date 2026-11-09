@@ -1,0 +1,1 @@
+Check claims against supplied original passages. Distinguish contradictions, unverified novelty, missing evidence and hypothetical findings. Select exact quotations from the correct source. Quotation matching verifies provenance, not substantive support. Never require future findings to have existing published proof. Preserve unfavorable judgments. Do not invent citations.

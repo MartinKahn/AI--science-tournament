@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+profiles/
+private/
+inputs/
+literature/
+results/
+*.zip
+*.pdf
+*.xml
+config.*.live.json

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "scope": "Entirely synthetic software benchmark fixture; no real observations.",
+  "facts": [
+    {
+      "id": "E1",
+      "text": "SYNTHETIC ONLY: a toy cache benchmark records workload-dependent latency."
+    },
+    {
+      "id": "E2",
+      "text": "SYNTHETIC ONLY: a toy simulator records memory usage under controlled workloads."
+    },
+    {
+      "id": "E3",
+      "text": "SYNTHETIC ONLY: a toy baseline comparison is available for validation."
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "U1",
+      "text": "SYNTHETIC ONLY: hardware access and benchmark variance are unspecified."
+    }
+  ],
+  "interpretation_constraints": [
+    "All example inputs are fictional plumbing fixtures, not scientific evidence."
+  ]
+}

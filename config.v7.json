@@ -1,0 +1,261 @@
+{
+  "model": "gpt-6.1-sol",
+  "base_url": "https://api.openai.com/v1",
+  "api_key_env": "OPENAI_API_KEY",
+  "concurrency": 4,
+  "timeout_seconds": 600,
+  "max_attempts": 1,
+  "max_output_tokens": 8000,
+  "max_api_calls": 260,
+  "round_sizes": [
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    1
+  ],
+  "word_limit": 200,
+  "task_version": "generic-research-planning-v1",
+  "selection": {
+    "min_nature_novelty": 3,
+    "min_nature_importance": 3,
+    "min_committee_feasibility": 3,
+    "min_committee_quality": 3,
+    "final_requires_unconditional_committee_feasibility": true,
+    "no_forced_winner": true
+  },
+  "reasoning_effort": "low",
+  "budget_usd": 5.0,
+  "output_token_limits": {
+    "writer": 4500,
+    "nature": 1400,
+    "committee": 2200,
+    "fact_checker": 2600
+  },
+  "pricing": {
+    "model": "gpt-6.1-sol",
+    "input_per_million": 2.0,
+    "output_per_million": 10.0,
+    "input_safety_multiplier": 1.25,
+    "verified_date": "2026-11-07",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "service_tier": "default",
+    "cache_discounts_assumed": false
+  },
+  "execution": "api-personas-v1",
+  "reviewer_models": {
+    "fact_checker": "gpt-6-luna"
+  },
+  "pricing_profiles": {
+    "gpt-6.1-sol": {
+      "model": "gpt-6.1-sol",
+      "input_per_million": 2.0,
+      "output_per_million": 10.0,
+      "input_safety_multiplier": 1.25,
+      "verified_date": "2026-11-07",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "service_tier": "default",
+      "cache_discounts_assumed": false
+    },
+    "gpt-6-luna": {
+      "model": "gpt-6-luna",
+      "input_per_million": 0.1,
+      "output_per_million": 0.5,
+      "input_safety_multiplier": 1.25,
+      "verified_date": "2026-11-07",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "service_tier": "default",
+      "cache_discounts_assumed": false
+    },
+    "gpt-6-astra": {
+      "model": "gpt-6-astra",
+      "input_per_million": 10.0,
+      "output_per_million": 50.0,
+      "input_safety_multiplier": 1.25,
+      "verified_date": "2026-11-08",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "service_tier": "default",
+      "cache_discounts_assumed": false
+    }
+  },
+  "allow_paid_run": false,
+  "v6": {
+    "version": "research-v6",
+    "roles": {
+      "writer": {
+        "model": "gpt-6.1-sol",
+        "max_input_bytes": 42000,
+        "max_output_tokens": 4500
+      },
+      "nature": {
+        "model": "gpt-6.1-sol",
+        "max_input_bytes": 24000,
+        "max_output_tokens": 1400
+      },
+      "committee": {
+        "model": "gpt-6.1-sol",
+        "max_input_bytes": 40000,
+        "max_output_tokens": 2200
+      },
+      "fact_checker": {
+        "model": "gpt-6-luna",
+        "max_input_bytes": 240000,
+        "max_output_tokens": 2600
+      },
+      "card": {
+        "model": "gpt-6-luna",
+        "max_input_bytes": 25000,
+        "max_output_tokens": 1200
+      },
+      "group": {
+        "model": "gpt-6-luna",
+        "max_input_bytes": 20000,
+        "max_output_tokens": 1400
+      },
+      "meta": {
+        "model": "gpt-6-luna",
+        "max_input_bytes": 35000,
+        "max_output_tokens": 1800
+      },
+      "pair": {
+        "model": "gpt-6.1-sol",
+        "max_input_bytes": 48000,
+        "max_output_tokens": 1400
+      }
+    },
+    "repair_reserve_usd": 0.25,
+    "retrieval_requests_per_round": 2,
+    "retrieval_papers_per_request": 2,
+    "retrieval_enabled": false,
+    "retry_unknown": false
+  },
+  "editorial": {
+    "journal": "Specialist research journal",
+    "instructions_file": "prompts/journal.md",
+    "persona": "Independent specialist-journal scientific reviewer",
+    "writer_instructions_file": "prompts/writer_v7.md"
+  },
+  "reviewer_model_schedule": [
+    {
+      "nature_1": "gpt-6-luna",
+      "committee_1": "gpt-6-luna",
+      "committee_2": "gpt-6-luna",
+      "fact_checker": "gpt-6-luna"
+    },
+    {
+      "nature_1": "gpt-6-luna",
+      "committee_1": "gpt-6-luna",
+      "committee_2": "gpt-6-luna",
+      "fact_checker": "gpt-6-luna"
+    },
+    {
+      "nature_1": "gpt-6-luna",
+      "committee_1": "gpt-6-luna",
+      "committee_2": "gpt-6-luna",
+      "fact_checker": "gpt-6-luna"
+    },
+    {
+      "nature_1": "gpt-6-luna",
+      "committee_1": "gpt-6-luna",
+      "committee_2": "gpt-6-luna",
+      "fact_checker": "gpt-6-luna"
+    },
+    {
+      "nature_1": "gpt-6-luna",
+      "committee_1": "gpt-6-luna",
+      "committee_2": "gpt-6-luna",
+      "fact_checker": "gpt-6-luna"
+    },
+    {
+      "nature_1": "gpt-6.1-sol",
+      "committee_1": "gpt-6.1-sol",
+      "committee_2": "gpt-6.1-sol",
+      "fact_checker": "gpt-6-luna"
+    }
+  ],
+  "research_compute": {
+    "initial_writers": {
+      "models": {
+        "writer-01": "gpt-6.1-sol",
+        "writer-02": "gpt-6.1-sol",
+        "writer-03": "gpt-6.1-sol",
+        "writer-04": "gpt-6-astra"
+      },
+      "reasoning_effort": "high",
+      "max_input_bytes": 24000,
+      "output_tokens_by_model": {
+        "gpt-6.1-sol": 8000,
+        "gpt-6-astra": 10000
+      }
+    },
+    "revision_writers": {
+      "reasoning_effort": "medium",
+      "max_output_tokens": 5500
+    },
+    "final_reviews": {
+      "reasoning_effort": "high",
+      "max_output_tokens": 4000
+    },
+    "final_comparison": {
+      "reasoning_effort": "high",
+      "max_output_tokens": 4000
+    }
+  },
+  "v7": {
+    "version": "research-v7",
+    "roles": {
+      "search": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "max_input_bytes": 14000,
+        "max_output_tokens": 1000
+      },
+      "brief_review": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "max_input_bytes": 24000,
+        "max_output_tokens": 1600
+      },
+      "brief_revision": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "max_input_bytes": 28000,
+        "max_output_tokens": 2400
+      },
+      "composition": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "max_input_bytes": 42000,
+        "max_output_tokens": 5500
+      },
+      "technical": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "max_input_bytes": 16000,
+        "max_output_tokens": 1400
+      },
+      "edit": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "max_input_bytes": 16000,
+        "max_output_tokens": 3500
+      },
+      "improvement": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "max_input_bytes": 40000,
+        "max_output_tokens": 1800
+      },
+      "issue_update": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "max_input_bytes": 40000,
+        "max_output_tokens": 1800
+      }
+    },
+    "queries_per_writer": 2,
+    "papers_per_query": 3
+  }
+}

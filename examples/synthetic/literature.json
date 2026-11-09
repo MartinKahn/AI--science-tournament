@@ -1,0 +1,51 @@
+{
+  "version": "synthetic-fixture",
+  "papers": [
+    {
+      "id": "N1-P1",
+      "title": "SYNTHETIC fixture document 1: benchmark methodology",
+      "access_level": "synthetic",
+      "aliases": []
+    },
+    {
+      "id": "N1-P2",
+      "title": "SYNTHETIC fixture document 2: benchmark methodology",
+      "access_level": "synthetic",
+      "aliases": []
+    },
+    {
+      "id": "N1-P3",
+      "title": "SYNTHETIC fixture document 3: benchmark methodology",
+      "access_level": "synthetic",
+      "aliases": []
+    }
+  ],
+  "primary_evidence": {
+    "sources": [
+      {
+        "id": "EXAMPLE-S1",
+        "paper_id": "N1-P1",
+        "title": "SYNTHETIC fixture document 1",
+        "location": "Fictional fixture paragraph",
+        "text": "SYNTHETIC ONLY fixture 1. Controlled benchmarks require comparable workloads and independent replication."
+      },
+      {
+        "id": "EXAMPLE-S2",
+        "paper_id": "N1-P2",
+        "title": "SYNTHETIC fixture document 2",
+        "location": "Fictional fixture paragraph",
+        "text": "SYNTHETIC ONLY fixture 2. Controlled benchmarks require comparable workloads and independent replication."
+      },
+      {
+        "id": "EXAMPLE-S3",
+        "paper_id": "N1-P3",
+        "title": "SYNTHETIC fixture document 3",
+        "location": "Fictional fixture paragraph",
+        "text": "SYNTHETIC ONLY fixture 3. Controlled benchmarks require comparable workloads and independent replication."
+      }
+    ]
+  },
+  "limits": [
+    "These are invented test fixtures, not real publications."
+  ]
+}

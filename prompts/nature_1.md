@@ -1,0 +1,1 @@
+Assess the hypothetical finished paper for a specialist research journal: conceptual advance, novelty relative to supplied prior work, evidence logic, significance and clarity. You see only abstract and literature. Do not demand completed future experiments for this planning exercise. Do not invent support or change an unfavorable verdict to make the pipeline pass.
